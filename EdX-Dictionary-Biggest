@@ -1,0 +1,23 @@
+
+
+def biggest(target_dict):
+	large_val_dict = {}
+	for key,value in target_dict.items(): #[k1, k2, k3, k4]
+		large_val_dict[key] = len(value)
+
+	largest_val = max(large_val_dict.values())
+
+	for k in large_val_dict:
+		if large_val_dict[k] == largest_val:
+			return k
+
+
+animals = { 'a': ['aardvark'], 'b': ['baboon','Lion', 'Aligator', 'Racoon'], 'c': ['coati']}
+animals['d'] = ['donkey']
+animals['d'].append('dog')
+animals['d'].append('dingo')
+animals['d'].append('Caymen')
+animals['d'].append('Dolphin')
+
+result = biggest(animals)
+print(result)
