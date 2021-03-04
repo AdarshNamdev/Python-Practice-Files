@@ -13,12 +13,13 @@ class Employee(object):
         self.salary = salary
         self.email = email
         
-    def display_details(self):
+    def display_details(self, department):
         print("Employee ID: ", self.ID)
         print("Employee Name: ", self.name)
         print("Phone: ", self.phone)
         print("Salary: ", self.salary)
         print("Email ID: ", self.email)
+        print("Department: ", department)
         
 class upraisals(object):
     @staticmethod
@@ -39,12 +40,12 @@ class upraisals(object):
 
         """
         EmpClassObj.salary = EmpClassObj.salary + (EmpClassObj.salary * (percentage/100))        
-        EmpClassObj.display_details()
+        EmpClassObj.display_details("InfoSec")
         #return EmpClassObj.salary
     
 e1 = Employee('an39366', 'Adarsh Namdev', salary = 540000, email = "adarsh.namdev@zensar.com")
 print("============= Inside Class Employee ============")
-e1.display_details()
+e1.display_details("InfoSec")
 
 print("\n============= Inside Class upraisals ============")
 upraisals.SalaryIncrement(e1, 12.5)
