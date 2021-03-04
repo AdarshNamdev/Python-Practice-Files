@@ -2,7 +2,7 @@
 """
 Created on Thu Mar  4 16:56:11 2021
 
-@author: adars
+@author: adarsh
 """
 
 from random import randint
