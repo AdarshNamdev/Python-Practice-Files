@@ -73,7 +73,37 @@ print("#############")
 print(objA.class_A_var)
 print(objB.class_A_var)
 print(objB.class_B_var)
-print("==================================================================")
+print("==================================================================\n")
       
 
-    
+print("================ EXAMPLE #2: CLASS METHOD ================")
+
+class Employee(object):
+	min_appraisal_perc = 0.02
+
+	def __init__(self, first, last, salary):
+		self.first = first
+		self.last = last
+		self.salary = salary
+
+	def get_email(self):
+		return str.lower(self.first)+"."+str.lower(self.last)+"@tmf-group.com"
+
+	@classmethod
+	def ReviseRaiseAmount(cls, new_amount):
+		cls.min_appraisal_perc = new_amount
+
+	def SalaryPostAppraisal(self):
+		return self.salary + (self.salary * self.min_appraisal_perc)
+
+emp1 = Employee("Adarsh", "Namdev", 700000)
+print("{}'s email ID: {}".format(emp1.first, emp1.get_email()))
+print("Current Minimum Appraisal %age: ", emp1.min_appraisal_perc)
+print("Salary After Appraisal: ", emp1.SalaryPostAppraisal())
+
+#rev_min_appr_perc = float(input("New minimum annual appraisal percentage: "))
+#emp1.ReviseRaiseAmount(rev_min_appr_perc)
+emp1.ReviseRaiseAmount(0.06)
+print("Rrevised Minimum Appraisal %age: ", emp1.min_appraisal_perc)
+print("Salary After Appraisal: ", emp1.SalaryPostAppraisal())
+
