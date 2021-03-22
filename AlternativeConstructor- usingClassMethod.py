@@ -25,7 +25,7 @@ class Employee(object):
 	@classmethod
 	def from_string(cls, emp_detail_str):
 		fname, lname, age, ID, salary = emp_detail_str.split("-")
-		return cls(fname, lname, int(age), ID, float(salary))
+		return cls(fname, lname, int(age), ID, float(salary))             # Alternative Constructor using @classmethod
 
 	def get_email(self):
 		return str.lower(self.fname)+"."+str.lower(self.lname)+"@tmf-group.com"
