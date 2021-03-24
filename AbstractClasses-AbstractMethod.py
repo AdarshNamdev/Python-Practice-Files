@@ -12,8 +12,11 @@ class MyClass(ABC):
 	A basic example of an Abstract Class and Abstract Method.
 
 	**Note: Python does NOT provide Abstract Class on it's own and to implement Abstract Class, we are module
-		dependent. This module is called "abc" and its "meta class ABC" is used to create the very first base
-		abstract class from.
+			dependent. This module is called "abc" and its "meta class ABC" is used to create the very first base
+			abstract class from.
+
+			importing 'abstractmethod' from 'abc' is required as without it we would get a "NameError" saying 
+			"NameError: name 'abstractmethod' is not defined"
 	"""
 
 	@abstractmethod
