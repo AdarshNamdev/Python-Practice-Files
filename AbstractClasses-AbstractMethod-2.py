@@ -28,11 +28,12 @@ class Car(ABC):
     @abstractmethod
     def engine(self):
         """
-        Method 'transmission' is an Abstract Method becasue not every car has same type of engine,
+        Method 'engine' is an Abstract Method becasue not every car has same type of engine,
         some are Diesel Engine and some Petrol Engine.
         """
         pass
-
+    
+    @abstractmethod
     def braking(self):
         """
         Method 'braking' is an Abstract Method becasue not every car has same kind of breaking mechanism, some have Hydraulic breaking
