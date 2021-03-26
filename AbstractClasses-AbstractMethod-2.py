@@ -90,13 +90,13 @@ class Hyundai(Car):
 
 
 
-beamer = BMW('720i', 2018, 'MP09MZ3084')
+beamer = BMW('720i', 2018, 'MH09MI3084')
 beamer.fillfuel()
 beamer.transmission()
 beamer.engine()
 beamer.braking()
 
-verna = Hyundai(model = 'Verna', regno = 'AOCPN6508A', year = 2017)
+verna = Hyundai(model = 'Verna', regno = 'ABCD6508A', year = 2017)
 verna.fillfuel()
 verna.transmission()
 verna.engine()
