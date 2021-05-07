@@ -16,7 +16,7 @@ with open(r"D:\PythonProgram\FileHandling\mbox-short.txt", 'r') as handle:
     for line in handle:
         line = line.strip()
         #IPAddress = IPAddress + re.match("\b[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\b", line)
-        IPAddress = re.findall("[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}", line)
+        IPAddress = re.findall("\\b[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\\b", line)
 
         if len(IPAddress) < 1:
             continue
