@@ -7,7 +7,7 @@ from prettytable import PrettyTable
 import re
 
 with open(r"D:\PythonProgram\FileHandling\mbox-short.txt", 'r') as handle:
-    IPAddress = []
+    #IPAddress = []
     ipTable = PrettyTable()
     line_num = 1
     ipTable.field_names= ["#", "Line from txt file", "IP Address"]
