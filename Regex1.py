@@ -3,6 +3,7 @@
 Find all the IP addresses from the txt file and store them in table
 """
 
+
 from prettytable import PrettyTable
 import re
 
