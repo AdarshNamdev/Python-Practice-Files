@@ -14,7 +14,7 @@ with open(r"D:\PythonProgram\FileHandling\mbox-short.txt", 'r') as handle:
     ipTable.field_names= ["#", "Line from txt file", "IP Address"]
 
     for line in handle:
-        line = line.strip()
+        line = line.rstrip()
         IPAddress = re.findall("[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}", line)
 
         if len(IPAddress) < 1:
@@ -26,3 +26,5 @@ with open(r"D:\PythonProgram\FileHandling\mbox-short.txt", 'r') as handle:
 
 
 print(ipTable)
+
+ababab
