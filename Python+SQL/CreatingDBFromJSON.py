@@ -72,13 +72,13 @@ conn.commit()
 testing = cur.execute("""
                            SELECT User.name,Course.title, Member.role FROM
                            User JOIN Member JOIN Course
-                           ON User.id = Member.user_id AND Member.course_id = Course.id
+
                            ORDER BY User.name DESC, Course.title DESC, Member.role DESC LIMIT 2;
 
                            """)
 
 for row in testing:
-    print("{}|{}|{}".format(row[0], row[1], row[2]))
+    print("{} | {} | {}".format(row[0], row[1], row[2]))
 
 # cur.execute("""
 #                     SELECT 'XYZZY' || hex(User.name || Course.title || Member.role ) AS X FROM User JOIN Member JOIN Course
