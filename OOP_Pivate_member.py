@@ -43,7 +43,7 @@ print(s1.age)
 To evade this issue of PRIVATE data there is a hack to retrieve its value!
 We can do by writing: <instancename>._<classname>__<privateVariablename>
 
-e.g.: s1._student_bankaccount
+e.g.: s1._student__bankaccount
 """
 
 print("Bank Account Number: ",s1._student__bankaccount)
