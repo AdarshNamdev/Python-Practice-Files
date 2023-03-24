@@ -27,7 +27,7 @@ class student(object):
         self.scholarship_amount = scholarship_amount
         #print(scholarship_amount)
         
-        return """Mr. Robert your bank account {} is credited with scholarship amount of ${}.00""".format(self._student__bankaccount, self.scholarship_amount)
+        return """\nHello {} {}!\nYour bank account {} is credited with scholarship amount of ${}.00""".format(self.fname, self.lname, self._student__bankaccount, self.scholarship_amount)
         
         
 s1 = student("Robert", "Brown", 35, "AOCPN6508A")
@@ -43,7 +43,7 @@ print(s1.age)
 To evade this issue of PRIVATE data there is a hack to retrieve its value!
 We can do by writing: <instancename>._<classname>__<privateVariablename>
 
-e.g.: s1._student_bankaccount
+e.g.: s1._student__bankaccount
 """
 
 print("Bank Account Number: ",s1._student__bankaccount)
